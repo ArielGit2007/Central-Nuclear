@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Central Nuclear</title>
+    <script src="script.js" defer></script>
+
+    <link rel="icon" type="image/png" href="radioactivo.png">
+    <audio id="alarma" src="nuclearAlarm.mp3" preload="auto"></audio>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Sistema de Monitoreo - Central Nuclear</h1>
+<div class="alertas">
+    <div><p>Alerta</p></div>
+    <div><p>Tiempo</p></div>
+</div>
+
+<div class="monitoreo"> 
+    <h2>Monitoreo</h2>
+    <div class="fila">
+        <div class="agua">
+            <div class="aguaHeader">
+            <span class="gota"></span>
+                <h3>Nivel de agua</h3>
+            </div>
+        <div class="barra-container">
+            <div id="barraAgua" class="barra"></div>
+        </div>
+    <p id="agua" style="font-family: 'Inter', sans-serif;" style="font-size: 16px;">70%</p>
+    <button class="btnagua" >Enviar Agua </button>
+    <button class="btndesfogar">Desfogar Agua </button>
+    </div>
+    <div class="temperatura"><h3>Temperatura</h3>
+    <p id="temperatura", style="font-family: 'Inter', sans-serif;">380°C</p>
+    </div>
+    <div class="energia"><h3>Energía</h3>
+    <p style="font-family: 'Inter', sans-serif;">850 MWe</p>
+    </div>
+    </div>
+</div>
+<div class="estado">
+    <h2>Estado de la central</h2>
+    <div class="PanelPasosIntegridad">
+        <div class="pasos">
+            <h3>Pasos a seguir</h3>
+            <p style="font-family: 'Inter', sans-serif;">Detener las turbinas</p>
+        </div>
+        <div class="integridad">
+            <h3>Integridad del Reactor</h3>
+            <p style="font-family: 'Inter', sans-serif;">100%</p>
+        </div>
+    </div>
+</div>   
+<div class="ControlCentral">
+    <div class="controles">
+    <h2>Controles</h2>
+        <div class="botones">
+            <button class="btnturbina" style="font-size: 15px;">DETENER TRUBINAS</button>
+            <button class="btnventilar" style="font-size: 15px;">VENTILAR CONTENIDO RADIOACTIVO</button>
+            <button class="btnapagar" style="font-size: 15px;">APAGAR REACTOR</button>
+        </div>
+    </div>
+    <div class="emergencia">
+        <h2>Emergencia</h2>
+        <div class="BtnEmergencia">
+            <button class="btnemer" style="font-size: 20px;">DETENCIÓN DE EMERGENCIA</button>
+        </div>
+
+        
+    </div>
+</div>
+<div id="overlay"></div>
+</body>
+</html>
