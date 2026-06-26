@@ -8,13 +8,14 @@
     <audio id="alarma" src="nuclearAlarm.mp3" preload="auto"></audio>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Sistema de Monitoreo - Central Nuclear</h1>
-<div class="alertas">
-    <div><p>Alerta</p></div>
-    <div><p>Tiempo</p></div>
+<div class="alertas" style="font-size: 20px;">
+    <div><p >Alerta</p></div>
+    <div><p>Tiempo: <span id="tiempo">--</span></p></div>
 </div>
 
 <div class="monitoreo"> 
@@ -32,12 +33,22 @@
     <button class="btnagua" >Enviar Agua </button>
     <button class="btndesfogar">Desfogar Agua </button>
     </div>
-    <div class="temperatura"><h3>Temperatura</h3>
-    <p id="temperatura", style="font-family: 'Inter', sans-serif;">380°C</p>
+    <div class="temperatura">
+        <div class="tempHeader">
+        <span class="material-symbols-outlined">device_thermostat</span>
+        <h3>Temperatura</h3> </div>
+    <p id="temperatura" style="font-family: 'Inter', sans-serif;">380°C</p>
     </div>
-    <div class="energia"><h3>Energía</h3>
-    <p style="font-family: 'Inter', sans-serif;">850 MWe</p>
+    <div class="energia">
+    <div class="energiaHeader">
+        <span class="material-symbols-outlined">bolt</span>
+        <h3>Energía</h3>
     </div>
+
+    <p class="MW">
+        <span id="energia">850</span> <span>MWe</span>
+    </p>
+</div>
     </div>
 </div>
 <div class="estado">
@@ -45,7 +56,7 @@
     <div class="PanelPasosIntegridad">
         <div class="pasos">
             <h3>Pasos a seguir</h3>
-            <p style="font-family: 'Inter', sans-serif;">Detener las turbinas</p>
+            <p style="font-family: 'Inter', sans-serif;">Nada que reportar</p>
         </div>
         <div class="integridad">
             <h3>Integridad del Reactor</h3>

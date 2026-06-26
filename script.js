@@ -4,12 +4,11 @@ let agua = 70;
 let velocidad = 1;
 
 const alarma = document.getElementById("alarma");
-alarma.volume = 0.05;
+alarma.volume = 0.2;
 let alarmaActiva = false;
 
 setInterval(() => {
     temperatura+= velocidad;
-    temperatura = Number(temperatura.toFixed(2));
     controlarAlarma();
      document.getElementById("temperatura").innerText = temperatura + "°C";
     },1000 ); 
@@ -127,3 +126,52 @@ else{
     velocidad = 1;
 }
 },1000)
+
+let tiempo = 30;
+let iniciar=false;
+setInterval(() => {
+ if(temperatura > 400){
+    iniciar = true;
+ }
+}, 1000);
+
+
+setInterval(() => {
+    if(iniciar){
+        if(tiempo <= 0){
+            tiempo = 0;
+            document.getElementById("tiempo").innerText = "0s";
+        }
+        else{
+        tiempo--;
+        document.getElementById("tiempo").innerText = tiempo + "s";
+        }
+    }}, 1000);
+let energia = 850;
+let energiaActiva = false;
+let intervaloEnergia = null;
+setInterval(() => {
+    if (temperatura > 400) {
+        if (!energiaActiva) {
+            energiaActiva = true;
+            iniciarSubidaEnergia();
+        }
+    } else {
+        energiaActiva = false;
+    }
+}, 1000);
+
+function iniciarSubidaEnergia() {
+     if (intervaloEnergia !== null) return;
+
+    intervaloEnergia = setInterval(() => {
+        energia += 5; // velocidad de crecimiento
+
+        document.getElementById("energia").innerText =
+            energia ;
+        if (energia > 1200) {
+            energia = 1200; // límite del sistema
+        }
+    }, 1000);
+}
+

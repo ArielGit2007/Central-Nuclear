@@ -156,7 +156,25 @@
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
-
+.tempHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding:15px;
+}
+.temperatura p{
+    font-size: 25px;
+    margin: 0;
+    padding: 15px;
+}
+.tempHeader h3{
+    margin: 0;
+}
+.material-symbols-outlined{
+    font-size: 40px !important;
+    color: red !important;
+}
 .barra-container {
     width: 100%;
     height: 20px;
@@ -170,6 +188,15 @@
     background-color: #00aaff;
     width: 70%;
     transition: width 0.5s ease;
+}
+
+.energia p{
+    font-size: 25px;
+    margin: 0;
+    padding: 15px;
+}
+.energia h3{
+    padding: 6px;
 }
 
 button{
