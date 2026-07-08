@@ -171,7 +171,7 @@
 .tempHeader h3{
     margin: 0;
 }
-.material-symbols-outlined{
+.tempHeader .material-symbols-outlined{
     font-size: 40px !important;
     color: red !important;
 }
@@ -198,6 +198,16 @@
 .energia h3{
     padding: 6px;
 }
+.energiaHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.energiaHeader .material-symbols-outlined {
+    font-size: 42px;
+    color: #ffd000;/
+}
 
 button{
     transition: all 0.15s ease;
@@ -207,6 +217,60 @@ button:active{
     transform: translateY(2px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
+#mensajeError{
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#explosion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 5s linear;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+.integridadInfo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.barraIntegridad{
+    width:220px;
+    height:20px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+    border:2px solid #666;
+}
+
+#barraIntegridad{
+    width:100%;
+    height:100%;
+    background:lime;
+    transition:width .3s, background .3s;
+}
+
+#integridadTexto{
+    font-size:22px;;
+    color:white;
+    min-width:60px;
+}   
 body{
     font-family: 'Share Tech Mono', monospace;
     background-color: #1e1e2f;
